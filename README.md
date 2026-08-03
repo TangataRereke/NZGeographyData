@@ -1,8 +1,8 @@
-# New Zealand Geographic & Emergency Service Reference Data
+# New Zealand Geographic & Emergency Service Reference Data & Quiz Program
 
 This repository contains comprehensive datasets detailing New Zealand (Aotearoa) geographic entities compiled specifically for emergency services research, disaster response mapping, and geographic reference testing.
 
-The datasets are split into clean, structured Markdown tables containing names (both English and Māori where applicable), latitude/longitude coordinates, administrative provinces (regions), and their associated NZ Police Districts.
+In addition to the raw data, this repository features an **interactive, terminal-based geography quiz application** (`nz_geography_quiz.py`) to study for NZ geography exams and test your recall.
 
 ---
 
@@ -32,6 +32,29 @@ To ensure the highest accuracy and avoid token limitation issues, the reference 
 
 6. **Category 6: Police Districts** (`data/police_districts/`)
    - [Police Districts](data/police_districts/police_districts.md)
+
+---
+
+## Interactive Geography Quiz Program
+
+The included `nz_geography_quiz.py` script automatically parses the Markdown data tables using Python's standard library. It classifies entities dynamically by North/South Island (via Latitudes) and tests your knowledge in two modes:
+
+1. **Mode 1: Location & Relationship Quiz**
+   - Questions about which Province/Region or Police District a landmark/town/lake is in.
+   - Dynamic relative-position questions: *"Is Ashburton north or south of Timaru?"*
+   - Island-location questions: *"Which island is Milford Sound located on?"*
+
+2. **Mode 2: Geography Spelling Challenge**
+   - Shows the first and last letters of a town, lake, or landmark with blanks in-between (e.g. `T____u`), and prompts you to fill in the blanks, providing hints about the item's region, police district, description, and Māori name.
+
+### How to Run the Quiz
+
+Ensure you are using Python 3 and execute the script from the repository root:
+
+```bash
+chmod +x nz_geography_quiz.py
+./nz_geography_quiz.py
+```
 
 ---
 
