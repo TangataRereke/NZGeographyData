@@ -109,18 +109,26 @@ def load_geography_data():
     # Post-process: assign Island and make sure required keys are present
     valid_items = []
     for item in items:
-        # Standardize keys
+        # Standardize key names
+        if 'Province(s)' in item and 'Province' not in item:
+            item['Province'] = item['Province(s)']
+        if 'Police District(s)' in item and 'Police District' not in item:
+            item['Police District'] = item['Police District(s)']
+
         name = item.get('English Name')
         lat = item.get('Latitude')
 
         if not name or lat is None:
             continue
 
-        # Determine Island: Wellington is roughly -41.28, Cook Strait is ~ -41.35
-        if lat > -41.35:
-            item['Island'] = 'North Island'
-        else:
+        # Determine Island based on Province/Region (latitude overlaps in the northern South Island)
+        prov = item.get('Province', '').strip()
+        if 'Chatham' in prov:
+            item['Island'] = 'Chatham Islands'
+        elif any(r in prov for r in ['Tasman', 'Nelson', 'Marlborough', 'West Coast', 'Canterbury', 'Otago', 'Southland']):
             item['Island'] = 'South Island'
+        else:
+            item['Island'] = 'North Island'
 
         # Ensure Māori Name is present
         m_name = item.get('Māori Name')
