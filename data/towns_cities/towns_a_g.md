@@ -4,7 +4,7 @@
 |---|---|---|---|---|---|
 | Auckland | Tāmaki Makaurau | -36.8485 | 174.7633 | Auckland | Auckland City |
 | Ashburton | Hakatere | -43.9015 | 171.7482 | Canterbury | Canterbury |
-| Alexandra | - | -45.2492 | 169.3797 | Otago | Southern |
+| Alexandra | Areketanara | -45.2492 | 169.3797 | Otago | Southern |
 | Arrowtown | Haehaenui | -44.9427 | 168.8358 | Otago | Southern |
 | Balclutha | Iwikatea | -46.2394 | 169.7410 | Otago | Southern |
 | Blenheim | Waiharakeke | -41.5134 | 173.9599 | Marlborough | Tasman |
@@ -14,7 +14,7 @@
 | Christchurch | Ōtautahi | -43.5321 | 172.6362 | Canterbury | Canterbury |
 | Clyde | - | -45.1906 | 169.3175 | Otago | Southern |
 | Coromandel | Kapanga | -36.7615 | 175.4975 | Waikato | Waikato |
-| Cromwell | - | -45.0400 | 169.2000 | Otago | Southern |
+| Cromwell | Tīrau | -45.0400 | 169.2000 | Otago | Southern |
 | Dannevirke | Tāne-nui-a-rangi | -40.2104 | 176.0964 | Manawatū-Whanganui | Eastern |
 | Dargaville | Tārawhati | -35.9333 | 173.8833 | Northland | Northland |
 | Devonport | Te Hau Kapua | -36.8277 | 174.7963 | Auckland | Waitematā |

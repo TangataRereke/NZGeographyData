@@ -3,7 +3,7 @@
 | English Name | Māori Name | Latitude | Longitude | Province (Region) | Police District |
 |---|---|---|---|---|---|
 | Hamilton | Kirikiriroa | -37.7870 | 175.2793 | Waikato | Waikato |
-| Hanmer Springs | Te Kaio | -42.5167 | 172.8333 | Canterbury | Canterbury |
+| Hanmer Springs | Te Whakatakanga o te Ngārahu o te Ahi a Tamatea | -42.5167 | 172.8333 | Canterbury | Canterbury |
 | Hastings | Heretaunga | -39.6394 | 176.8394 | Hawke's Bay | Eastern |
 | Hawera | Hāwera | -39.5933 | 174.2833 | Taranaki | Central |
 | Havelock North | Karanema | -39.6667 | 176.8833 | Hawke's Bay | Eastern |
