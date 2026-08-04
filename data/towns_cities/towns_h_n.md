@@ -10,7 +10,7 @@
 | Helensville | Te Awaroa | -36.6833 | 174.4500 | Auckland | Waitematā |
 | Hokitika | Hokitika | -42.7167 | 170.9667 | West Coast | Tasman |
 | Huntly | Rāhui Pōkeka | -37.5583 | 175.1617 | Waikato | Waikato |
-| Invecarghill | Waihōpai | -46.4131 | 168.3538 | Southland | Southern |
+| Invercargill | Waihōpai | -46.4131 | 168.3538 | Southland | Southern |
 | Kaiapoi | Kaiapoi | -43.3833 | 172.6500 | Canterbury | Canterbury |
 | Kaikohe | Kaikohe | -35.4075 | 173.7997 | Northland | Northland |
 | Kaikoura | Kaikōura | -42.4000 | 173.6814 | Canterbury | Tasman |
@@ -29,7 +29,7 @@
 | Masterton | Whakaoriori | -40.9594 | 175.6575 | Wellington | Wellington |
 | Matamata | Matamata | -37.8103 | 175.7708 | Waikato | Waikato |
 | Milton | - | -46.1167 | 169.9667 | Otago | Southern |
-| Morrinsville | Mōrinsawhira | -37.6533 | 175.5264 | Waikato | Waikato |
+| Morrinsville | Mōrena | -37.6533 | 175.5264 | Waikato | Waikato |
 | Mosgiel | - | -45.8753 | 170.3478 | Otago | Southern |
 | Motueka | Motueka | -41.1119 | 173.0139 | Tasman | Tasman |
 | Mount Maunganui | Mauao | -37.6403 | 176.1844 | Bay of Plenty | Bay of Plenty |
