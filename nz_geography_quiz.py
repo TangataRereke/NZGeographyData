@@ -25,6 +25,20 @@ def print_header(title):
     print(f"{BLUE}{BOLD}  {title}{ENDC}")
     print(f"{BLUE}{BOLD}{'=' * 60}{ENDC}\n")
 
+def normalize_name(s):
+    if not s:
+        return ""
+    # Map te reo Māori macrons to plain Latin characters
+    mapping = {
+        'ā': 'a', 'ē': 'e', 'ī': 'i', 'ō': 'o', 'ū': 'u',
+        'Ā': 'a', 'Ē': 'e', 'Ī': 'i', 'Ō': 'o', 'Ū': 'u'
+    }
+    s = s.lower()
+    for k, v in mapping.items():
+        s = s.replace(k, v)
+    # Remove any non-alphanumeric characters
+    return re.sub(r'[^a-z0-9]', '', s)
+
 def parse_markdown_table(filepath):
     """
     Parses a Markdown table from a given file and returns list of dictionaries representing rows.
@@ -274,7 +288,8 @@ def run_spelling_quiz(items):
         print(f"{YELLOW}Question {total + 1}:{ENDC} Spell this New Zealand {cat_info.lower()}:")
         print(f"  {BOLD}{masked_word}{ENDC}")
         print(f"  {BLUE}Location:{ENDC} {province} region, {district} Police District")
-        if m_name:
+        # Only show Māori Name if it provides a non-trivial hint (i.e. different from English Name)
+        if m_name and normalize_name(m_name) != normalize_name(name):
             print(f"  {BLUE}Māori Name:{ENDC} {m_name}")
         if desc:
             print(f"  {BLUE}Description:{ENDC} {desc}")
