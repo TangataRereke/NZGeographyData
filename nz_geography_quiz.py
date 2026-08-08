@@ -276,7 +276,7 @@ def run_spelling_quiz(items):
         blanks = "_" * middle_len
 
         # Build prompt string, e.g. T____u
-        masked_word = f"{first}{blanks}{last}"
+        masked_word = f"{first}{blanks}{last} ({len(name)})"
 
         # Extra helpful details
         desc = item.get('Type / Description') or item.get('Description') or ""
