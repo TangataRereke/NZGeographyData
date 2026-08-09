@@ -222,17 +222,17 @@ def run_geography_quiz(items):
         # Choose a question type
         #q_type = random.choice(['relative', 'province', 'district', 'island'])
 
-        if q_type == 'relative':
-            q, hint, ans = get_relative_position_question(items)
-        elif q_type == 'province':
-            q, hint, ans = get_province_question(items)
-        elif q_type == 'district':
-            q, hint, ans = get_district_question(items)
-        else:
-            q, hint, ans = get_island_question(items)
+        #if q_type == 'relative':
+        #    q, hint, ans = get_relative_position_question(items)
+        #elif q_type == 'province':
+        #    q, hint, ans = get_province_question(items)
+        #elif q_type == 'district':
+        #    q, hint, ans = get_district_question(items)
+        #else:
+        #    q, hint, ans = get_island_question(items)
 
-        if not ans:
-            continue
+        #if not ans:
+        #    continue
 
         print(f"{YELLOW}Question {total + 1}:{ENDC} {q}")
         if hint:
@@ -291,7 +291,7 @@ def run_spelling_quiz(items):
         name = item['English Name']
 
         # Exclude names that are too short to quiz effectively (e.g., < 4 letters)
-        if len(name) < 4 in name:# or ' ' in name or '/' in name or '-' in name:
+        if len(name) < 4: # in name or ' ' in name or '/' in name or '-' in name:
             continue
 
         first = name[0]
