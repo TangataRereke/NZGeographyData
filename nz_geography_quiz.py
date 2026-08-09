@@ -201,10 +201,26 @@ def run_geography_quiz(items):
 
     score = 0
     total = 0
-
-    while True:
-        # Choose a question type
+    
+    # Build a shuffled pool of questions first
+    question_pool = []
+    for _ in range(len(items) * 3):  # 3x ensures plenty of variety
         q_type = random.choice(['relative', 'province', 'district', 'island'])
+        if q_type == 'relative':
+            q, hint, ans = get_relative_position_question(items)
+        elif q_type == 'province':
+            q, hint, ans = get_province_question(items)
+        elif q_type == 'district':
+            q, hint, ans = get_district_question(items)
+        else:
+            q, hint, ans = get_island_question(items)
+        if ans:  # only add valid questions
+            question_pool.append((q, hint, ans))
+    random.shuffle(question_pool)
+
+    for q, hint, ans in question_pool:
+        # Choose a question type
+        #q_type = random.choice(['relative', 'province', 'district', 'island'])
 
         if q_type == 'relative':
             q, hint, ans = get_relative_position_question(items)
@@ -262,12 +278,20 @@ def run_spelling_quiz(items):
     score = 0
     total = 0
 
-    while True:
-        item = random.choice(items)
+    # Build a shuffled list of all valid spelling items
+    spelling_pool = [item for item in items if len(item['English Name']) >= 4]
+    random.shuffle(spelling_pool)
+
+    if not spelling_pool:
+        print("No items to spell!")
+        return
+
+    for item in spelling_pool:
+#        item = random.choice(items)
         name = item['English Name']
 
         # Exclude names that are too short to quiz effectively (e.g., < 4 letters)
-        if len(name) < 4 or ' ' in name or '/' in name or '-' in name:
+        if len(name) < 4 in name:# or ' ' in name or '/' in name or '-' in name:
             continue
 
         first = name[0]
